@@ -6,7 +6,7 @@ import { Header } from "./components/Header";
 import { NewTransactionModal } from './components/NewTransactionModal';
 import { TransactionsTable } from "./components/TransactionsTable";
 import { GlobalStyle } from "./styles/global";
-import { TransactionsProvider } from './TransactionsContext';
+import { TransactionsProvider } from './hooks/useTransactionsContext';
 
 Modal.setAppElement("#root");
 
