@@ -3,6 +3,7 @@ import Modal from 'react-modal';
 import closeImg from '../../assets/close.svg';
 import IncomeImg from '../../assets/income.svg';
 import OutcomeImg from '../../assets/outcome.svg';
+import { api } from '../../services/api';
 import { Container, TransactionTypeContainer, RadioBox } from './styles';
 
 interface NewTransactionModalProps {
@@ -25,6 +26,8 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
       category,
       type
     };
+
+    api.post('/transactions', data);
   }
 
   return (
