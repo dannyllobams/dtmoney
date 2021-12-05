@@ -19,12 +19,12 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
   function handleCreateNewTransaction(event: FormEvent) {
     event.preventDefault();
 
-    console.log({
+    const data = {
       title,
       value,
       category,
       type
-    });
+    };
   }
 
   return (
@@ -41,7 +41,7 @@ export function NewTransactionModal({ isOpen, onRequestClose }: NewTransactionMo
         </button>
         <Container 
           onSubmit={handleCreateNewTransaction}>
-            
+
           <h2>Cadastrar transação</h2>
 
           <input 
